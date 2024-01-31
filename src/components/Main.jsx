@@ -29,8 +29,12 @@ const Main = () => {
                         />
                     </h2>
                     <div className="flex justify-between pt-6 pb-40 max-w-[50px] w-full">
-                        <FaLinkedin className='cursor-pointer' size={20}/>
-                        <FaGithub className='cursor-pointer' size={20}/>
+                        <a href="https://www.linkedin.com/in/ryangrantrhoads/">
+                            <FaLinkedin className='cursor-pointer' size={20}/>
+                        </a>
+                        <a href="https://github.com/rgrhoads">
+                            <FaGithub className='cursor-pointer' size={20}/>
+                        </a>
                     </div>
                 </div>
             </div>
