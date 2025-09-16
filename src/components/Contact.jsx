@@ -3,6 +3,7 @@ import React from "react";
 const Contact = () => {
     return (
         <div id='contact' className="max-w-[1040px] m-auto md:pl-20 p-4 py-16">
+            <div className="bg-white/70 backdrop-blur-sm rounded-xl shadow p-6">
             <h1 className="py-4 text-4xl font-bold text-center text-[#4A7090]">Contact</h1>
             <form 
                 action="https://getform.io/f/6c232097-9882-486c-8945-e9337f26bf9d" 
@@ -35,6 +36,7 @@ const Contact = () => {
                     Send Message
                 </button>
             </form>
+            </div>
         </div>
     )
 }

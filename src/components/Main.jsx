@@ -5,12 +5,7 @@ import {FaLinkedin, FaGithub} from "react-icons/fa"
 const Main = () => {
     return (
         <div id='main'>
-            <img 
-                className='w-full h-screen object-cover object-left scale-x-[-1]'
-                src='https://images.pexels.com/photos/1054218/pexels-photo-1054218.jpeg'
-                alt="Abstract background"
-            />
-            <div className='w-full h-screen absolute top-0 left-0 bg-white/50'>
+            <div className='w-full h-screen'>
                 <div className="max-w-[700px] m-auto h-full w-full flex flex-col justify-center items-center">
                     <h1 className="sm:text-5xl text-4xl font-bold text-gray-800">Hello, I'm Ryan Rhoads.</h1>
                     <h2 className="flex sm:text-3xl text-2xl pt-4 text-gray-800">

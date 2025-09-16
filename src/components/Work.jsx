@@ -63,20 +63,22 @@ const data = [
 const Work = () => {
     return (
         <div id="work" className="max-w-[1040px] m-auto md:pl-20 p-4 py-16">
-            <h1 className="text-4xl font-bold text-center text-[#4A7090] pb-2">
-                Work
-            </h1>
-            {data.map((item, idx) => (
-                <WorkItem 
-                    key={idx} 
-                    year={item.year} 
-                    company={item.company}
-                    title={item.title} 
-                    duration={item.duration} 
-                    details={item.details}
-                    bullets={item.bullets}
-                />    
-            ))}
+            <div className="bg-white/70 backdrop-blur-sm rounded-xl shadow p-6">
+                <h1 className="text-4xl font-bold text-center text-[#4A7090] pb-2">
+                    Work
+                </h1>
+                {data.map((item, idx) => (
+                    <WorkItem 
+                        key={idx} 
+                        year={item.year} 
+                        company={item.company}
+                        title={item.title} 
+                        duration={item.duration} 
+                        details={item.details}
+                        bullets={item.bullets}
+                    />    
+                ))}
+            </div>
         </div>
     )
 }
