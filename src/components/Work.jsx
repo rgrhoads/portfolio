@@ -3,11 +3,18 @@ import WorkItem from "./WorkItem";
 
 const data = [
     {
-        year: "2021 - Present",
-        company: "Gray Matters Inc",
-        title: 'Fullstack Software Engineer',
+        year: "2024 - Present",
+        company: "LoneCypress AI",
+        title: 'Senior Full Stack Software Engineer',
+        duration: "1 Year",
+        details: 'Designed and deployed GreenGenes, a serverless ETL pipeline (S3 ingest → OCR on EC2 → LLM transforms → structured JSON → APIs/PostgreSQL). Led development of RumbleData, an IoT predictive maintenance platform with real-time ingestion on AWS using Docker & PostgreSQL. Managed frontend for RapidVision, a real-time camera control UI (React + WebSockets to C++ backend) with complex viewing modes and dynamic controls. Contributed to CypressDB (Phase I SBIR): optimized OCR pipelines, integrated AI via Ollama\'s Granite3.2-vision, and presented the final demo to DoD stakeholders. Acted as Security Manager, leading NIST and CMMC Level 1 compliance efforts.' 
+    },
+    {
+        year: "2021 - 2023",
+        company: "GrayMatters Inc. | WaveDancer",
+        title: 'Full Stack Software Engineer',
         duration: "2 Years",
-        details: 'I am currently part of a small team of developers building a blockchain inventory management / shipping and logistics platform. While on this team I have filled the role of front-end, back-end and dev-ops engineer. As a front-end developer I have used React to build intuitive user interfaces. As a back-end developer I have built multiple full CRUD API microservices in Golang. As a devops engineer I have built intricate CI/CD pipelines through GitLab to deploy our services to AWS hosted EC2s. I am comfortable and enjoy working in multiple roles, assisting the team accomplish complicated customer requirements.' 
+        details: 'Led migration from a monolithic Python codebase to Golang microservices, improving scalability and performance. Directed frontend transition from Vue.js to React, redesigning UX/UI. Built reusable Golang libraries to reduce duplication and improve maintainability. Implemented middleware APIs connecting React to Hyperledger Fabric for real-time asset tracking, contracts, chat, and UI integration.' 
     },
     {
         year: "2016-2021",
