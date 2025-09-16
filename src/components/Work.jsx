@@ -14,7 +14,7 @@ const data = [
         company: "SNC, MAG Aerospace, Leidos",
         title: 'Airborne Intelligence Analyst',
         duration: "6 Years",
-        details: 'As an analyst I worked overseas in support of various government and military customers. I was responsible for coordinating with multiple ground teams simultaneously to provide realtime intelligence and communication support in deployed locations. After 2 years as an analyst I became an instructor, respnsible for building training programs and developing new analysts. During my 2 years as an instructor I trained over 30 analysts with a success rate over 95%. I was eventually promoted to lead analyst where I was responsible for a team of 15-20 analysts. I coordinated overseas travel and managed our on-site personnel in order to maintain 24 hour, real time support, to our various customers.' 
+        details: 'As an analyst I worked overseas in support of various government and military customers. I was responsible for coordinating with multiple ground teams simultaneously to provide realtime intelligence and communication support in deployed locations. After 2 years as an analyst I became an instructor, responsible for building training programs and developing new analysts. During my 2 years as an instructor I trained over 30 analysts with a success rate over 95%. I was eventually promoted to lead analyst where I was responsible for a team of 15-20 analysts. I coordinated overseas travel and managed our on-site personnel in order to maintain 24 hour, real time support, to our various customers.' 
     },
     {
         year: "2012-2016",
