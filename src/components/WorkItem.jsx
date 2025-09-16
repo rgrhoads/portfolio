@@ -1,6 +1,7 @@
 import React from "react";
 
-const WorkItem = ({year, company, title, duration, details}) => {
+const WorkItem = ({year, company, title, duration, details, bullets}) => {
+    const hasBullets = Array.isArray(bullets) && bullets.length > 0;
     return (
         <ol className="flex flex-col md:flex-row relative border-l border-stone-200">
             <li className="mb-10 ml-4">
@@ -11,7 +12,16 @@ const WorkItem = ({year, company, title, duration, details}) => {
                     <span className="text-lg font-semibold text-stone-500">{"@ " + company}</span>
                     <span className="my-1 text-sm font-normal leading-none text-stone-400">{duration}</span>
                 </p>
-                <p className="my-2 text-base font-normal text-stone-700">{details}</p>
+                {!hasBullets && (
+                    <p className="my-2 text-base font-normal text-stone-700">{details}</p>
+                )}
+                {hasBullets && (
+                    <ul className="my-3 list-disc pl-6 space-y-2 text-stone-700">
+                        {bullets.map((item, idx) => (
+                            <li key={idx} className="text-base leading-relaxed">{item}</li>
+                        ))}
+                    </ul>
+                )}
             </li>
         </ol>
     )

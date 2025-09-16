@@ -7,35 +7,56 @@ const data = [
         company: "LoneCypress AI",
         title: 'Senior Full Stack Software Engineer',
         duration: "1 Year",
-        details: 'Designed and deployed GreenGenes, a serverless ETL pipeline (S3 ingest → OCR on EC2 → LLM transforms → structured JSON → APIs/PostgreSQL). Led development of RumbleData, an IoT predictive maintenance platform with real-time ingestion on AWS using Docker & PostgreSQL. Managed frontend for RapidVision, a real-time camera control UI (React + WebSockets to C++ backend) with complex viewing modes and dynamic controls. Contributed to CypressDB (Phase I SBIR): optimized OCR pipelines, integrated AI via Ollama\'s Granite3.2-vision, and presented the final demo to DoD stakeholders. Acted as Security Manager, leading NIST and CMMC Level 1 compliance efforts.' 
+        bullets: [
+            'Designed and deployed GreenGenes, a serverless ETL pipeline (S3 → OCR on EC2 → LLM transforms → JSON → APIs/PostgreSQL).',
+            'Led RumbleData, an IoT predictive maintenance platform with real-time AWS ingestion (Docker, PostgreSQL).',
+            'Managed frontend for RapidVision (React + WebSockets to C++ backend) with advanced viewing modes.',
+            'Contributed to CypressDB (Phase I SBIR): optimized OCR, integrated AI via Ollama\'s Granite3.2-vision, demoed to DoD.',
+            'Acted as Security Manager; led NIST and CMMC Level 1 compliance efforts.'
+        ]
     },
     {
         year: "2021 - 2023",
         company: "GrayMatters Inc. | WaveDancer",
         title: 'Full Stack Software Engineer',
         duration: "2 Years",
-        details: 'Led migration from a monolithic Python codebase to Golang microservices, improving scalability and performance. Directed frontend transition from Vue.js to React, redesigning UX/UI. Built reusable Golang libraries to reduce duplication and improve maintainability. Implemented middleware APIs connecting React to Hyperledger Fabric for real-time asset tracking, contracts, chat, and UI integration.' 
+        bullets: [
+            'Led migration from monolithic Python to Golang microservices for scalability and performance.',
+            'Directed frontend transition from Vue.js to React and redesigned UX/UI.',
+            'Built reusable Golang libraries to reduce duplication and improve maintainability.',
+            'Implemented middleware APIs connecting React to Hyperledger Fabric (assets, contracts, chat, UI integration).'
+        ]
     },
     {
         year: "2016-2021",
         company: "SNC, MAG Aerospace, Leidos",
-        title: 'Airborne Intelligence Analyst',
+        title: 'Field Service Engineer',
         duration: "6 Years",
-        details: 'As an analyst I worked overseas in support of various government and military customers. I was responsible for coordinating with multiple ground teams simultaneously to provide realtime intelligence and communication support in deployed locations. After 2 years as an analyst I became an instructor, responsible for building training programs and developing new analysts. During my 2 years as an instructor I trained over 30 analysts with a success rate over 95%. I was eventually promoted to lead analyst where I was responsible for a team of 15-20 analysts. I coordinated overseas travel and managed our on-site personnel in order to maintain 24 hour, real time support, to our various customers.' 
+        bullets: [
+            'Led real-time intelligence and communications support across multiple ground teams in deployed operations.',
+            'Built and delivered training programs; instructed 30+ analysts with >95% pass rate.',
+            'Promoted to lead analyst; managed 15–20 analysts and coordinated overseas travel/24×7 coverage.'
+        ]
     },
     {
         year: "2012-2016",
         company: "Best Buy, Apple",
         title: 'Retail Sales',
-        duration: "4 Years",
-        details: 'I began as a computer sales associate but eventually moved into a multi-channel sales associate responsible for all products in person and online. Eventually I was promoted to a lead position where I was in charge of managing all training for over 100 employees at our locations. I was eventually hired by Apple to manage all Apple product sales at our Best Buy location. In this position I was responsible for training Best Buy employees on Apple products and maintaining the Apple brand within the store.' 
+        bullets: [
+            'Led training for 100+ employees; maintained Apple brand standards in-store.',
+            'Apple vendor representative; trained staff on Apple products and sales practices.',
+            'Advanced from computer sales to multi-channel sales across in-store and online.'
+        ]
     },
     {
         year: "2006-2012",
         company: "United States Air Force",
         title: 'Airborne Korean Linguist',
         duration: "6 Years",
-        details: 'While in the United States Air Force I worked in various capacities as Korean language expert. I completed over 100 air operation missions where I assisted in building mission plans and providing airborne communication and intelligence support to a wide range of both ground teams and other air assets to successfully complete deployed operations.' 
+        bullets: [
+            'Completed 100+ air operation missions; supported mission planning, communications, and intelligence.',
+            'Served as Korean language expert across diverse roles and mission sets.'
+        ]
     },
 ]
 
@@ -53,6 +74,7 @@ const Work = () => {
                     title={item.title} 
                     duration={item.duration} 
                     details={item.details}
+                    bullets={item.bullets}
                 />    
             ))}
         </div>
