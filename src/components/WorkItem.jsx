@@ -3,9 +3,9 @@ import React from "react";
 const WorkItem = ({year, company, title, duration, details, bullets}) => {
     const hasBullets = Array.isArray(bullets) && bullets.length > 0;
     return (
-        <ol className="flex flex-col md:flex-row relative border-l border-stone-200">
+        <ol className="flex flex-col md:flex-row relative border-l border-[#4A7090]">
             <li className="mb-10 ml-4">
-                <div className="absolute w-3 h-3 bg-stone-200 rounded-full mt-1.5 -left-1.5 border-white"/>
+                <div className="absolute w-3 h-3 bg-[#4A7090] rounded-full mt-1.5 -left-1.5 border-white"/>
                 <p className="flex flex-wrap gap-4 flex-row items-center justify-start text-xs md:text-sm">
                     <span className="inline-block px-2 py-1 font-semibold text-white bg-[#507D96] rounded-md">{year}</span>
                     <span className="text-lg font-semibold text-[#507D96]">{title}</span>
