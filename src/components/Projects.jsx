@@ -3,6 +3,26 @@ import ProjectItem from "./ProjectItem"
 
 const data = [
     {
+        image: "/vite.svg",
+        title: "SynthGen",
+        link: "#"
+    },
+    {
+        image: "/vite.svg",
+        title: "CypressDB",
+        link: "#"
+    },
+    {
+        image: "/vite.svg",
+        title: "RumbleData",
+        link: "#"
+    },
+    {
+        image: "/vite.svg",
+        title: "GreenGenes",
+        link: "#"
+    },
+    {
         image: "https://raw.githubusercontent.com/hr-rfp55-venusaur/CulturePunk/main/demos/Homepage.gif",
         title: "Culture Punk",
         link: "https://github.com/hr-rfp55-venusaur/CulturePunk/tree/main"
