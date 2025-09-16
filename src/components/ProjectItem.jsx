@@ -6,7 +6,7 @@ const ProjectItem = ({img, title, description, onOpen}) => {
     const handleOpen = (e) => {
         e.stopPropagation();
         const rect = containerRef.current?.getBoundingClientRect();
-        onOpen && onOpen({ img, title, description }, rect);
+        onOpen && onOpen({ image: img, title, description }, rect);
     };
 
     return (

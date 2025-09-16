@@ -51,23 +51,27 @@ const Projects = () => {
     const [animStyle, setAnimStyle] = useState(null);
     const [targetBox, setTargetBox] = useState(null);
 
+    const computeTargetBox = () => {
+        const padding = 32; // viewport padding
+        const maxW = Math.min(960, window.innerWidth - padding * 2);
+        const maxH = Math.min(Math.round(window.innerHeight * 0.7), window.innerHeight - padding * 2);
+        const targetX = Math.round((window.innerWidth - maxW) / 2);
+        const targetY = Math.round((window.innerHeight - maxH) / 2);
+        return { w: maxW, h: maxH, x: targetX, y: targetY };
+    };
+
     const handleOpen = (item, rect) => {
         setActive(item);
         setOriginRect(rect);
 
-        // Compute target box (bigger modal) relative to viewport
-        const padding = 32; // viewport padding
-        const maxW = Math.min(1100, window.innerWidth - padding * 2);
-        const maxH = Math.min(700, window.innerHeight - padding * 2);
-        const targetX = Math.round((window.innerWidth - maxW) / 2);
-        const targetY = Math.round((window.innerHeight - maxH) / 2);
-        setTargetBox({ w: maxW, h: maxH, x: targetX, y: targetY });
+        const target = computeTargetBox();
+        setTargetBox(target);
 
         // Initial transform: card rect -> modal box
-        const scaleX = rect.width / maxW;
-        const scaleY = rect.height / maxH;
+        const scaleX = rect.width / target.w;
+        const scaleY = rect.height / target.h;
         const startTransform = `translate(${rect.left}px, ${rect.top}px) scale(${scaleX}, ${scaleY})`;
-        const endTransform = `translate(${targetX}px, ${targetY}px) scale(1, 1)`;
+        const endTransform = `translate(${target.x}px, ${target.y}px) scale(1, 1)`;
 
         setAnimStyle({ transform: startTransform, transition: 'none' });
         setModalOpen(true);
@@ -99,6 +103,18 @@ const Projects = () => {
         }
     };
 
+    // Recompute target box and animate to new size on resize
+    useEffect(() => {
+        if (!modalOpen || !originRect) return;
+        const onResize = () => {
+            const target = computeTargetBox();
+            setTargetBox(target);
+            setAnimStyle((prev) => prev ? { ...prev, transform: `translate(${target.x}px, ${target.y}px) scale(1, 1)`, transition: 'transform 180ms ease' } : prev);
+        };
+        window.addEventListener('resize', onResize);
+        return () => window.removeEventListener('resize', onResize);
+    }, [modalOpen, originRect]);
+
     return (
         <div id="projects" className="container mx-auto px-4 py-16">
             <div className="bg-white/70 backdrop-blur-sm rounded-xl shadow p-6 min-w-[320px] max-w-4xl mx-auto">
@@ -122,18 +138,18 @@ const Projects = () => {
                             style={animStyle ? { ...animStyle, transformOrigin: 'top left' } : undefined}
                         >
                             <div
-                                className="bg-white rounded-xl shadow-2xl overflow-hidden"
+                                className="bg-white rounded-xl shadow-2xl overflow-hidden p-3 md:p-4"
                                 style={{ width: targetBox.w, height: targetBox.h }}
                             >
-                                <div className="flex flex-col md:flex-row h-full">
-                                    <div className="md:w-1/3 h-48 md:h-full">
-                                        <img src={active.image} alt={active.title} className="w-full h-full object-cover" />
-                                    </div>
-                                    <div className="flex-1 p-6 overflow-auto">
+                                <div className="grid grid-rows-[auto,1fr] h-full gap-3">
+                                    <div className="p-6 overflow-auto">
                                         <h3 className="text-3xl font-bold text-[#2b4c64]">{active.title}</h3>
                                         <p className="mt-3 text-stone-700 text-base leading-relaxed">
                                             {active.description || 'More details coming soon.'}
                                         </p>
+                                    </div>
+                                    <div className="relative bg-gray-50 flex items-center justify-center overflow-hidden rounded-lg">
+                                        <img src={active.image} alt={active.title} className="max-w-full max-h-full object-contain" />
                                     </div>
                                 </div>
                                 <div className="flex justify-end gap-2 p-4 border-t">
