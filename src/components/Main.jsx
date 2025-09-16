@@ -6,7 +6,7 @@ const Main = () => {
     return (
         <div id='main'>
             <div className='w-full h-screen'>
-                <div className="max-w-[700px] m-auto h-full w-full flex flex-col justify-center items-center">
+                <div className="container mx-auto h-full w-full flex flex-col justify-center items-center px-4">
                     <h1 className="sm:text-5xl text-4xl font-bold text-gray-800">Hello, I'm Ryan Rhoads.</h1>
                     <h2 className="flex sm:text-3xl text-2xl pt-4 text-gray-800">
                         <TypeAnimation

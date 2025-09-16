@@ -26,8 +26,8 @@ const data = [
 
 const Projects = () => {
     return (
-        <div id="projects" className="max-w-[1040px] m-auto md:pl-20 p-4 py-16">
-            <div className="bg-white/70 backdrop-blur-sm rounded-xl shadow p-6">
+        <div id="projects" className="container mx-auto px-4 py-16">
+            <div className="bg-white/70 backdrop-blur-sm rounded-xl shadow p-6 min-w-[320px] max-w-4xl mx-auto">
                 <h1 className="text-4xl font-bold text-center text-[#4A7090] pb-2">Projects</h1>
                 <p className="text-center text-stone-700 py-8">Take a look at some of the projects I've worked on! Click to get more info!</p>
                 <div className="grid sm:grid-cols-2 gap-12">

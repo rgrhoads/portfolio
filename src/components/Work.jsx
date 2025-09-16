@@ -62,8 +62,8 @@ const data = [
 
 const Work = () => {
     return (
-        <div id="work" className="max-w-[1040px] m-auto md:pl-20 p-4 py-16">
-            <div className="bg-white/70 backdrop-blur-sm rounded-xl shadow p-6">
+        <div id="work" className="container mx-auto px-4 py-16">
+            <div className="bg-white/70 backdrop-blur-sm rounded-xl shadow p-6 min-w-[320px] max-w-4xl mx-auto">
                 <h1 className="text-4xl font-bold text-center text-[#4A7090] pb-2">
                     Work
                 </h1>
