@@ -5,22 +5,22 @@ const data = [
     {
         image: "/vite.svg",
         title: "SynthGen",
-        description: "Synthetic data generation toolkit to create privacy-preserving datasets for AI/ML development."
+        description: "SBIR Phase I synthetic data generation platform using Fourier transforms, geometric projections (circular, helical, 3D), and signal manipulation. Generates high-quality synthetic signals preserving real-world statistical properties for domains like human activity recognition, vehicle telemetry, and cybersecurity. Includes Flask web UI, SQLite tracking, and support for CIFAR-10, MNIST, ECG, and network traffic datasets."
     },
     {
         image: "/vite.svg",
         title: "CypressDB",
-        description: "SBIR Phase I effort; OCR optimization, AI integration, and rapid demo delivery to stakeholders."
+        description: "SBIR Phase I system for ingesting technical documentation from ballistics testing. Provides semantic search over ingested documents and Retrieval-Augmented Generation (RAG) to answer user questions with grounded citations. Built with a local Flask UI, Ollama LLMs, and ChromaDB for vector search."
     },
     {
         image: "/vite.svg",
         title: "RumbleData",
-        description: "IoT predictive maintenance platform with real-time ingestion and dashboards on AWS."
+        description: "IoT vehicle monitoring platform: sensors stream real-time data to AWS (DB/S3) for processing and storage. A predictive maintenance engine analyzes utilization and health, surfacing proactive insights via desktop and mobile apps. Includes Terraform-driven infra, SSL/TLS, Dockerized services, and automated ops."
     },
     {
         image: "/vite.svg",
         title: "GreenGenes",
-        description: "Serverless ETL pipeline (S3 → OCR → LLM transforms → JSON → APIs/PostgreSQL)."
+        description: "Automated PDF-to-JSON pipeline on AWS: S3 triggers OCR (EC2), then NLP (Lambda + ChatGPT gpt-4o-mini) normalizes text into structured JSON and posts to an API. Uses Lambda layers, IAM-scoped permissions, and environment-configured endpoints/keys; outputs to PostgreSQL via a PSQL Lambda."
     },
     {
         image: "https://raw.githubusercontent.com/hr-rfp55-venusaur/CulturePunk/main/demos/Homepage.gif",
