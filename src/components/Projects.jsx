@@ -3,7 +3,8 @@ import ProjectItem from "./ProjectItem"
 
 const data = [
     {
-        image: "/Homepage.gif",
+        // image: "/Homepage.gif",
+        image: "https://raw.githubusercontent.com/rgrhoads/portfolio/main/public/Homepage.gif",
         title: "Culture Punk",
         link: "https://github.com/hr-rfp55-venusaur/CulturePunk/tree/main"
     },
