@@ -126,7 +126,7 @@ const Projects = () => {
   }, [modalOpen, originRect]);
 
   return (
-    <div id="projects" className="container mx-auto px-4 py-16">
+    <div id="projects" className="container mx-auto px-4 py-20 mt-4">
       <div className="bg-white/70 backdrop-blur-sm rounded-xl shadow p-6 min-w-[320px] max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold text-center text-[#4A7090] pb-2">Projects</h1>
         <p className="text-center text-stone-700 py-8">
