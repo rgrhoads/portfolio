@@ -7,7 +7,7 @@ const Main = () => {
 
   useEffect(() => {
     const onScroll = () => {
-      const fadeDistance = 400; // px over which to fade out
+      const fadeDistance = 800; // px over which to fade out (slower fade)
       const y = window.scrollY;
       const next = Math.max(0, Math.min(1, 1 - y / fadeDistance));
       setOpacity(next);
