@@ -36,38 +36,39 @@ const Main = () => {
               />
             </div>
             <div className="flex flex-col items-center sm:items-start w-full">
-              <div className="w-full max-w-xl">
+              <div className="w-full max-w-xl flex flex-col gap-3 sm:gap-2">
+                <h2 className="sm:text-3xl text-2xl text-gray-800 text-center">Hello, I'm</h2>
                 <h1 className="sm:text-5xl text-4xl font-bold text-gray-800 text-center sm:text-left">
-                  Hello, I'm Ryan Rhoads.
+                  Ryan Rhoads
                 </h1>
-                <div className="flex items-center justify-between w-full pt-4">
-                  <h2 className="sm:text-3xl text-2xl text-gray-800">
-                    <TypeAnimation
-                      sequence={["Leader...", 2000, "Collaborator...", 2000, "Engineer...", 2000]}
-                      wrapper="div"
-                      cursor={true}
-                      repeat={Infinity}
-                    />
-                  </h2>
-                  <div className="flex items-center gap-4 text-xl">
-                    <a
-                      href="https://www.linkedin.com/in/ryangrantrhoads/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="pointer-events-auto"
-                    >
-                      <FaLinkedin className="cursor-pointer" />
-                    </a>
-                    <a
-                      href="https://github.com/rgrhoads"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="pointer-events-auto"
-                    >
-                      <FaGithub className="cursor-pointer" />
-                    </a>
-                  </div>
+                {/* <div className="flex items-center justify-between w-full"> */}
+                <h2 className="sm:text-3xl text-2xl text-gray-800 text-center">
+                  <TypeAnimation
+                    sequence={["Leader...", 2000, "Collaborator...", 2000, "Engineer...", 2000]}
+                    wrapper="div"
+                    cursor={true}
+                    repeat={Infinity}
+                  />
+                </h2>
+                <div className="flex items-center justify-center gap-4 text-xl">
+                  <a
+                    href="https://www.linkedin.com/in/ryangrantrhoads/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="pointer-events-auto"
+                  >
+                    <FaLinkedin className="cursor-pointer" />
+                  </a>
+                  <a
+                    href="https://github.com/rgrhoads"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="pointer-events-auto"
+                  >
+                    <FaGithub className="cursor-pointer" />
+                  </a>
                 </div>
+                {/* </div> */}
               </div>
             </div>
           </div>
