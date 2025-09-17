@@ -3,9 +3,9 @@ import React from "react";
 const WorkItem = ({ year, company, title, duration, details, bullets, projects = [] }) => {
   const hasBullets = Array.isArray(bullets) && bullets.length > 0;
   return (
-    <ol className="flex flex-col relative">
-      <li className="mb-10 ml-4">
-        <div className="rounded-lg bg-white/80 backdrop-blur-sm shadow p-4 sm:p-5">
+    <ol className="flex flex-col relative list-none pl-0">
+      <li className="mb-4">
+        <div className="rounded-lg bg-gray-100/60 backdrop-blur-sm shadow p-4 sm:p-5">
           <div className="flex flex-col gap-1.5 text-sm">
             <span className="inline-block w-fit px-2 py-1 font-semibold text-white bg-[#507D96] rounded-md">
               {year}
@@ -30,7 +30,7 @@ const WorkItem = ({ year, company, title, duration, details, bullets, projects =
               <h4 className="text-[#3A6080] font-semibold">Projects at {company}</h4>
               <div className="mt-2 grid gap-3">
                 {projects.map((p, i) => (
-                  <div key={i} className="rounded-md bg-white/70 shadow p-3">
+                  <div key={i} className="rounded-md bg-white/90 shadow-xl p-3">
                     <div className="text-sm font-medium text-[#2b4c64]">{p.name}</div>
                     {p.description && (
                       <p className="text-sm text-stone-700 mt-1">{p.description}</p>

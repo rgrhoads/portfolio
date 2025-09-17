@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <div id="contact" className="container mx-auto px-6 py-20 mt-4">
       <h1 className="text-4xl font-bold text-center text-[#4A7090] p-4 m-4">Contact Me</h1>
-      <div className="bg-white/70 backdrop-blur-sm rounded-xl shadow p-6 min-w-[320px] max-w-4xl mx-auto">
+      <div className="bg-gray-100/70 backdrop-blur-sm rounded-xl shadow p-6 min-w-[320px] max-w-4xl mx-auto">
         <form
           action="https://getform.io/f/6c232097-9882-486c-8945-e9337f26bf9d"
           method="POST"

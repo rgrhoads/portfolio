@@ -122,7 +122,7 @@ const Work = () => {
       <h1 className="text-4xl font-bold text-center text-[#4A7090] p-4 m-4">
         Professional Experience
       </h1>
-      <div className=" p-6 min-w-[320px] max-w-4xl mx-auto">
+      <div className="bg-white/50 backdrop-blur-sm rounded-xl shadow w-full p-6 min-w-[320px] max-w-4xl mx-auto">
         {data.map((item, idx) => (
           <WorkItem
             key={idx}
