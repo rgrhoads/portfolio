@@ -24,7 +24,7 @@ const Main = () => {
       {/* Fixed hero overlay that fades on scroll */}
       <div className="fixed inset-0 pointer-events-none">
         <div
-          className="container mx-auto h-full w-full flex flex-col justify-center items-center px-4"
+          className="container mx-auto h-full w-full flex flex-col justify-start items-center px-4 pt-[33vh]"
           style={{ opacity }}
         >
           <div className="flex flex-col sm:flex-row items-center gap-6">
@@ -43,21 +43,20 @@ const Main = () => {
                 <div className="flex items-center justify-between w-full pt-4">
                   <h2 className="sm:text-3xl text-2xl text-gray-800">
                     <TypeAnimation
-                      sequence={["Collaborator...", 2000, "Engineer...", 2000, "Coder...", 2000]}
+                      sequence={["Leader...", 2000, "Collaborator...", 2000, "Engineer...", 2000]}
                       wrapper="div"
                       cursor={true}
                       repeat={Infinity}
-                      style={{ fontSize: "1em", paddingLeft: "6px" }}
                     />
                   </h2>
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-4 text-xl">
                     <a
                       href="https://www.linkedin.com/in/ryangrantrhoads/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="pointer-events-auto"
                     >
-                      <FaLinkedin className="cursor-pointer" size={20} />
+                      <FaLinkedin className="cursor-pointer" />
                     </a>
                     <a
                       href="https://github.com/rgrhoads"
@@ -65,7 +64,7 @@ const Main = () => {
                       rel="noopener noreferrer"
                       className="pointer-events-auto"
                     >
-                      <FaGithub className="cursor-pointer" size={20} />
+                      <FaGithub className="cursor-pointer" />
                     </a>
                   </div>
                 </div>
