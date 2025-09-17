@@ -19,12 +19,12 @@ const Sidenav = () => {
           >
             <GrProjects size={20} />
           </a>
-          <a
+          {/* <a
             href="#projects"
             className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 p-3 sm:p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
             <AiOutlineProject size={20} />
-          </a>
+          </a> */}
           <a
             href="#contact"
             className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 p-3 sm:p-4 cursor-pointer hover:scale-110 ease-in duration-200"
